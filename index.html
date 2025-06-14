@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio + To-Do + Products</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#todo">To-Do List</a>
+    <a href="#products">Products</a>
+  </nav>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h1>Hi, I'm Siri Pawar</h1>
+      <p>I'm a web developer skilled in HTML, CSS, JavaScript, and more. I build beautiful, responsive websites and apps.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <article class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>A responsive website showcasing my skills and projects.</p>
+        </article>
+        <article class="project-card">
+          <h3>To-Do List App</h3>
+          <p>A JavaScript app to manage tasks with localStorage support.</p>
+        </article>
+        <article class="project-card">
+          <h3>Product Listing Page</h3>
+          <p>Interactive page with filtering and sorting options.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required />
+        <div class="error" id="nameError"></div>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required />
+        <div class="error" id="emailError"></div>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- To-Do List Section -->
+    <section id="todo" class="section">
+      <h2>To-Do List</h2>
+      <div class="todo-input-group">
+        <input type="text" id="todoInput" placeholder="Add a new task..." />
+        <button id="addTodoBtn">Add</button>
+      </div>
+      <ul class="todo-list" id="todoList"></ul>
+    </section>
+
+    <!-- Product Listing Section -->
+    <section id="products" class="section">
+      <h2>Products</h2>
+      <div class="filters">
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="electronics">Electronics</option>
+          <option value="books">Books</option>
+          <option value="clothing">Clothing</option>
+        </select>
+
+        <select id="sortOptions">
+          <option value="default">Sort by</option>
+          <option value="priceAsc">Price: Low to High</option>
+          <option value="priceDesc">Price: High to Low</option>
+          <option value="ratingDesc">Rating: High to Low</option>
+        </select>
+      </div>
+
+      <div id="productList" class="product-list"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
